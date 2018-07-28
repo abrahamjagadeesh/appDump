@@ -1,0 +1,32 @@
+<html>
+<head><!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script> -->
+<script src="vendor/angular.js"></script>
+<script src="source.js"></script>
+<script src="final.json"></script>
+<script src="main.js"></script>
+<script src="workarea.js"></script>
+<script src="app.js"></script>
+
+</head>
+<body ng-app="chennai">
+
+<div ng-controller="load_stations">
+
+<select ng-change="fn_changeSourceStation(selectedSource)" ng-model="selectedSource" ng-options="station[1] for station in stations"></select>
+<select ng-change="fn_changeDestinationStation(selectedDestination)" ng-model="selectedDestination" ng-options="station[1] for station in stations"></select>
+
+{{source}}
+{{destination}}
+<span>{{timetable}}</span>
+
+<ul>
+	<li ng-repeat="train in allTrains">{{train}}</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

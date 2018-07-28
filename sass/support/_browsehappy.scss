@@ -1,0 +1,33 @@
+.browsehappy,.browsehappy-wrap {
+	width: 100%;
+	color: #FFFFFF;
+	direction: ltr;
+	font-size: 40px;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	z-index: 30;
+}
+.browsehappy{
+	z-index: 31;
+	padding: 100px 30%;
+	width: 40%;
+}
+.browsehappy-wrap{
+	@include opacity(0.8);
+	background-color: #000000;
+	padding: 100px 30%;
+}
+.browsehappy a{
+	color: #fff;
+	text-decoration: underline;
+}
+.browsehappy-close {
+	border: 1px solid #FFFFFF;
+	line-height: 1;
+	padding: 0 11px 12px;
+	position: absolute;
+	right: 30%;
+	top: 40px;
+	cursor: hand;
+}

@@ -1,0 +1,266 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background-color: #FBF8F5;
+}
+._n {
+    font-family: 'Lato', sans-serif;
+    font-size: 300;
+}
+.colon {
+    margin: 0 -4%;
+}
+h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+/*menu header*/
+.search_bar_title a,
+.menu-header-right a {
+  color: #FFFFFF;
+}
+.bg-menu-header {
+    @extend .clearfix;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    font-weight: 700;
+}
+.menu-header-left > span:last-child {
+  position: relative;
+  top: 3px;
+  white-space: nowrap;
+}
+.menu-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.bg-menu-header[class*=icon-] {
+    color: #fff;
+}
+.menu-header-left {
+    @extend .align_left;
+}
+.menu-header-right {
+    @extend .align_right;
+}
+.menu-header-right span {
+  /*  padding: 6px 14px;
+  font-size: 22px;*/
+}
+/*widget*/
+
+.widget {
+    background-color: $color-red;
+    color: #FFFFFF;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 20px 0;
+    position: fixed;
+    top: 46px;
+    width: 100%;
+}
+.widget-menu {
+    padding: 0 0 10px;
+    @extend .clearfix;
+}
+.widget-menu > span {
+    @extend .align_left;
+    width: 50%;
+    padding: 0 15px;
+}
+.widget-menu-action {
+    //@include opacity(0.5);
+}
+.widget-menu .widget-menu-action {
+    @extend .align_right;
+    @extend .text_right;
+}
+.widget-time {
+    font-size: 60px;
+}
+.widget-blocks {
+    @extend .clearfix;
+    @extend .text_center;
+    width: 840px;
+    padding: 6px 0 10px;
+    //height: 200px;
+    @include transform(translate3d(0, 0, 0));
+    //@include transition(all 1s);
+
+}
+.widget-blocks.disableTransition {
+    @include transition(all 0s);
+}
+.widget-one {
+    float: left;
+    border: 1px #fff solid;
+    padding: 0 15px 20px;
+    width: 210px;
+}
+.widget-one:nth-child(odd) {
+    border-width: 0 1px 1px 0;
+}
+.widget-one:nth-child(even) {
+    border-width: 1px 1px 0px 0;
+}
+/*search train*/
+
+.home-search-train {
+    padding: 20px;
+}
+/*next trains*/
+
+.next-train {
+    padding: 10px 0;
+    margin: 0 10px;
+    border: 1px #808080 solid;
+    border-width: 0 0 1px;
+    position: relative;
+}
+.next-trains{
+    background-color: #FFFFFF;
+    margin-top: 260px;
+    position: relative;
+}
+.next-trains h2 {
+    padding: 0 20px;
+    margin: 0;
+}
+.next-train-station {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 100px 0 0;
+}
+.next-train-watch {
+    font-size: 36px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 2px;
+    width: 100px;
+}
+.next-train-mins {
+    bottom: 13px;
+    font-size: 12px;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 50px;
+}
+.title-listTrains {
+    background-color: #D9DBDD;
+    color: #656565;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+.trains-prop {
+    background-color: #F5F5F5;
+    color: #656565;
+    padding: 6px 0 5px;
+    @extend .clearfix;
+}
+.trains-prop dl {
+    float: left;
+    width: 33%;
+}
+.trains-prop dd,
+.trains-prop dt {
+    padding: 0 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.trains-prop .train-chart-edit {
+    font-size: 14px;
+    padding-top: 5px;
+    text-align: center;
+}
+.trains-chart {
+    padding-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+}
+.next-trains-five {
+    background-color: #505050;
+    color: #FFFFFF;
+    font-weight: 400;
+    padding: 6px 8px 9px;
+}
+.newLocationSource,
+.newLocationDestination {
+    position: relative
+}
+.newLocations label {
+    left: 10px;
+    position: absolute;
+    top: 1px;
+    width: 100px;
+}
+.newLocations span {
+    margin: 0 10px 0 100px;
+    display: block;
+}
+.newLocations {
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 8px 10px 0;
+    padding: 10px 0 0;
+}
+.newLocations select {
+    height: auto;
+    padding: 4px 5px;
+}
+.search_bar_title {
+    background-color: $color-red;
+    color: #FFFFFF;
+    padding: 10px 8px;
+}
+.search_second_title {
+    font-size: 14px;
+    padding: 20px 10px 2px;
+}
+.searchBar .newLocations {
+    margin-bottom: 20px;
+}
+.searchBar .next-train-name {
+  position: relative;
+  top: 12px;
+}
+.notrainsfound {
+  color:$color-red;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 12px 10px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 319px){
+    .next-train-watch{
+        font-size: 26px;
+    }
+    .widget{
+        top:44px;
+    }
+    .next-train-station{
+        font-size: 10px;
+    }
+    .menu-header{
+        font-size: 12px;
+    }
+    .widget-time {
+      font-size: 40px;
+    }
+    .widget-one{
+      width: 180px;
+    }
+    .next-trains{
+        margin-top: 228px;
+    }
+}

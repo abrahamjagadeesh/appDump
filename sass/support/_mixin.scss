@@ -1,0 +1,103 @@
+
+
+$body-color: #000;
+$anchor-color:#d40612;
+$anchor-hover-color:#000;
+$base-font-size:16; //default fontsize
+
+
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + ($value/$base-font-size)}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  @if $property == "font-size"{
+    @extend .#{$class-slug}#{$values};
+  }
+  @else if $property == "line-height"{
+    @extend .#{$line-slug}#{$values};
+  }
+  @else{
+    #{$property}: $pxValues;
+    //#{$property}: $remValues;
+  }
+}
+
+/*font sizes with classname*/
+//example: .__f10;
+
+$class-slug: __f !default;
+
+@each $i in (14,15,16,18,19,20,22,24,36,40,46){
+  .#{$class-slug}#{$i}
+  {
+    font-size: $i+px;
+    //font-size: ($i/$base-font-size)+rem;
+  }
+}
+/*font sizes with classname*/
+
+/*line-height with classname*/
+//example: .line_10;
+
+$line-slug: line_ !default;
+
+@each $i in (23,24,26,32,33,56){
+  .#{$line-slug}#{$i}
+  {
+    line-height: $i+px;
+    //line-height: ($i/$base-font-size)+rem;
+  }
+}
+/*line-height with classname*/
+
+@mixin mediarem($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + ($value/$base-font-size)}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+  #{$property}: $pxValues;
+  //#{$property}: $remValues;
+
+
+}

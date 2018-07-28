@@ -1,0 +1,11 @@
+
+
+.font {
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+.lfont{
+	font-family: 'Lato', sans-serif;
+	@extend .font;
+}

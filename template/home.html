@@ -1,0 +1,25 @@
+
+
+
+<div class="widget">
+	<div class="widget-menu">
+		<span class="menu-header-right">
+			<span><a href="#search"><span class="icon-search"></span> Search Trains</a></span>
+		</span>
+		<span class="widget-menu-action" ng-click="changeLocationRequested($root.whenLocationChange)" ng-model="$root.whenLocationChange">
+			<span class="icon-compass"></span>
+			<span class="change-location">Change Locations</span>
+		</span>
+	</div>
+	<div widget class="widget-blocks" id="widget-blocks"></div>
+</div>
+
+<div class="next-trains">
+	<h3 data-ng-hide="$root.whenLocationChange" class="next-trains-five">Next Five Trains</h3>
+	<h3 ng-click="changeLocationRequested($root.whenLocationChange)" ng-model="$root.whenLocationChange" data-ng-show="$root.whenLocationChange" class="next-trains-five">Cancel</h3>
+</div>
+
+<list-trains ng-model="section1" port="portion1" sector="section1"></list-trains>
+<list-trains ng-model="section2" port="portion2" sector="section2"></list-trains>
+<list-trains ng-model="section3" port="portion3" sector="section3"></list-trains>
+<list-trains ng-model="section4" port="portion4" sector="section4"></list-trains>
